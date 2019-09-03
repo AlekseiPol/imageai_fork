@@ -24,10 +24,11 @@ def parse_voc_annotation(ann_dir, img_dir, cache_name, labels=[]):
                 continue
             
             for elem in tree.iter():
+                print("elem.tag =", elem.tag)
                 if 'filename' in elem.tag:
                     img['filename'] = img_dir + elem.text
                     print("old ", img['filename'])
-                    img['filename'] = os.join(img_dir, elem.text)
+                    img['filename'] = os.path.join(img_dir, elem.text)
                     print("new ", img['filename'])
                 if 'width' in elem.tag:
                     img['width'] = int(elem.text)
