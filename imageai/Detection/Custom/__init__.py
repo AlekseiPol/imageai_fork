@@ -109,10 +109,10 @@ class DetectionModelTrainer:
         :return:
         """
 
-        self.__train_images_folder = os.path.join(data_directory, "train/images/")
-        self.__train_annotations_folder = os.path.join(data_directory, "train/annotations/")
-        self.__validation_images_folder = os.path.join(data_directory, "validation/images/")
-        self.__validation_annotations_folder = os.path.join(data_directory, "validation/annotations/")
+        self.__train_images_folder = os.path.join(data_directory, "train", "images")
+        self.__train_annotations_folder = os.path.join(data_directory, "train", "annotations")
+        self.__validation_images_folder = os.path.join(data_directory, "validation", "images")
+        self.__validation_annotations_folder = os.path.join(data_directory, "validation", "annotations")
 
         if os.path.exists(os.path.join(data_directory, "cache")) == False:
             os.makedirs(os.path.join(data_directory, "cache"))
