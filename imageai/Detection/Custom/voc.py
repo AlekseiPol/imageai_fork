@@ -24,7 +24,7 @@ def parse_voc_annotation(ann_dir, img_dir, cache_name, labels=[]):
                 continue
             
             for elem in tree.iter():
-                print("elem.tag =", elem.tag)
+#                print("elem.tag =", elem.tag)
                 if 'filename' in elem.tag:
 #                    img['filename'] = img_dir + elem.text
 #                    print("old ", img['filename'])
