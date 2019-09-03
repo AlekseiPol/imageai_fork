@@ -222,8 +222,8 @@ class DetectionModelTrainer:
             self.__model_labels
 
         )
-        print("5 ", self.__train_annotations_folder, "\t", self.__train_images_folder)
-        print("6 ", train_ints)
+#        print("5 ", self.__train_annotations_folder, "\t", self.__train_images_folder)
+#        print("6 ", train_ints)
         if(self.__training_mode):
             print('Training on: \t' + str(labels) + '')
             print("Training with Batch Size: ", self.__train_batch_size)
