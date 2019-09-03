@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import pickle
 
 def parse_voc_annotation(ann_dir, img_dir, cache_name, labels=[]):
+    print("ann_dir ", ann_dir, " img_dir ", img_dir)
     if os.path.exists(cache_name):
         with open(cache_name, 'rb') as handle:
             cache = pickle.load(handle)
