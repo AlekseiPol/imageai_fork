@@ -110,10 +110,14 @@ class DetectionModelTrainer:
         """
 
         self.__train_images_folder = os.path.join(data_directory, "train", "images")
+        print("1 ", self.__train_images_folder)
         self.__train_annotations_folder = os.path.join(data_directory, "train", "annotations")
+        print("2", self.__train_annotations_folder)
         self.__validation_images_folder = os.path.join(data_directory, "validation", "images")
+        print("3 ", self.__validation_images_folder)
         self.__validation_annotations_folder = os.path.join(data_directory, "validation", "annotations")
-
+        print("4 ", self.__validation_annotations_folder)
+        
         if os.path.exists(os.path.join(data_directory, "cache")) == False:
             os.makedirs(os.path.join(data_directory, "cache"))
         self.__train_cache_file = os.path.join(data_directory, "cache", "detection_train_data.pkl")
